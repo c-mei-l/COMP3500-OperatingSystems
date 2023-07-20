@@ -1,0 +1,47 @@
+Project1Report 
+
+~~Source Code~~
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int numArray[10];
+    int size = 10;
+    double sum = 0.0;
+    double avg = 0.0;
+    
+    printf("Enter 10 numbers");
+    //add elements to numArray
+    int i = 0;
+    for (i = 0; i < size; ++i) {
+        scanf("%d",&numArray[i]);
+    }
+    //square root each element and add to sum
+    int j = 0;
+    for (j = 0; j < size; ++j) {
+        sum += sqrt (numArray[j]);
+    }
+    //divide sum by 10 to get the average
+    avg = sum / 10.0;
+    
+    printf("The average of the square roots is %lf",avg);
+    printf("\n");
+    return 0;
+    
+}
+
+
+~~Experience Report~~
+
+1. Setting up my Linux environment:
+I code on a Mac, so setting up my Linux environment was not a super difficult task. Thanks to my Software Construction class, I have a fairly basic understanding of connecting and using this environment. 
+
+2. Using Linux Commands:
+Again, after taking a previous class, I have had prior experience with using simple commands. The only small issue I ran into had to do with some performance anxiety when creating the script file which caused me to restart a few times. 
+
+3. Creating Reports to Get to Know my System:
+I really had no issues with this step of the project once I figured out the syntax for using the pipe. 
+
+4. Using the Editor, Compiler, Libraries, and Debugger 
+The first issue that I had with the compiler had to do with the version of the compiler that I was using. The first error I got had to do with declaring variables in the for loop. Once that was changed, I had no issues compiling and running my program (after figuring out that I was supposed to run my executable file and not my source code).
