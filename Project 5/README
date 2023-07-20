@@ -1,0 +1,30 @@
+Courtney Lee
+COMP 3500
+Project 5
+
+Source Code 
+(1) open.h
+(2) open.cpp
+(3) read.h
+(4) read.cpp
+(5) stats.h
+(6) stats.cpp
+(7) scheduler.h
+(8) scheduler.cpp
+
+How to manually compile the above multiple source code files?
+$g++ -std=c++11 open.c
+$g++ -std=c++11 read.c
+$g++ -std=c++11 print.c
+$gcc open.o read.o print.o scheduler.c -o scheduler
+
+How to run the executable file - scheduler? (Must include which policy)
+$./scheduler task.list FCFS
+$./scheduler task.list RR
+$./scheduler task.list SRTF
+
+(task.list can be changed to any test file in the directory)
+
+
+How to compile using the Makefile?
+$make
