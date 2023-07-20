@@ -1,0 +1,23 @@
+Thread Questions
+1. When thread_exit is called, it removes the virtual memory space and deferments the counter. When it sleeps, the thread yields control control to the next thread and takes back control with wakeup is called.  
+
+2. mi_switch and md_switch
+
+3. There are 4 states: S_RUN, S_READY, S_SLEEP, and S_ZOMB. 
+
+4. When interrupts are turned off, it cannot be interrupted even if an interrupt is signaled. This is accomplished by using spl to set priority level. Turning off interrupts is important because it allows a process to complete without being interrupted, which solves the race conditions. 
+
+5. The thread is removed from the queue and make_runnable is called on it. The thread can be run again with mi_switch is called. 
+
+Scheduler Questions
+6. struct thread* scheduler(void) 
+
+7. scheduler(void) is called and it schedules the threads in the queue with equal time slices and no priorities. 
+
+8. It calls the hardclock method and thread_yeild is called.
+
+Synchronization Questions
+9. thread_sleep is used in the P function of the semaphore, which suspends the current thread until the semaphore count is > 0. thread_wakeup is used in the V function of the semaphore, which suspends the threads waiting on the current semaphore.
+The argument passed to thread_sleep is the address of the semaphore the sleeping thread is associated with. This is so when thread_wakeup is called, it knows which semaphore to wake up. 
+
+10. Locks have to be released by the same thread that acquires them
