@@ -1,0 +1,30 @@
+Courtney Lee
+cml0082
+Project 2 Questions 
+
+1. 29
+2. The only bus supported for MIPS is LAMEbus
+3. Splhigh disables interrupts and spl0 enables interrupts 
+4. These typedefs are used to differentiate variable types. 
+5. Splx return the previous spl value 
+6. 15
+7. Hardclock interrupts are generated 100 Hz
+8. d_open, d_close, d_io, and d_ioctl
+9. 32 bits 
+10. 15
+11. You have to implement fs_sync, fs_getvolume, fs_getroot, fs_umount
+12. thread_sleep
+13. 32 bits
+14. Open, close, reclaim, read, redline, getdirectory, write, ioctl, stat, gettype, 
+    tryseek, sync, mmap, truncate, namefile, create, symlink, mkdir, link, remove, 
+    rmdir, rename, lookup, and lookparent
+15. The max path is 1024
+16. SYS_reboot 8
+17. It is defined as 0 in the units.h within the kern 
+18. Yes, you can. The scheduler and the initializer are different things.  *
+19. Zombies are heads or processes that have exited, but not been fully deleted
+20. 32 bits
+21. It is the device name *
+22. It is the same as the device name with the word 'raw' on the end 
+23. vn_countlock
+24. Character and block devices 
