@@ -1,0 +1,9 @@
+1. Starvation is avoided in my implementation by limiting the amount of times either cats or mice can eat. This way every animal ets to eat.
+Furthermore, the use of sempahores, mutexes, and turns ensure that the threads move fairly. When animals get hungry, they increase a semaphore variable if a dish is available then the animal is allowed acccess to it, but only if it's the only animal in the ktichen.
+If there's another animal in the kithcne then it must check if the thread type is the same and if there's an additional available resource to use. If both of these are true then the animal can eat, but if not then it waits.
+If there are two animals, they either leave if they're alone or wait and leave togehter. This frees the kitchen for the next animals competing to enter the kitchen. Because of the turn function it allows the opposite animal type access to the ktichen when it's empty.
+Finally, using mutexes we ensure that we mark a dish as either busy or available to make sure there's no shared resources.
+
+2. This project was the most time-intensive and difficult programming assignment I've worked on. Initially, I had tried to implement a solution using the bool datatype (true and false), but ran into multiple dropping thread issues. I then went back and re-implemented my solution
+using the int datatype. I further had to double check that every wait had a corresponding signal and no nested functions were sharing a semaphore. This was very difficult for me and it took a lot of time to ensure my program worked properly. However, I now believe I understand
+use of semaphores much more than I did prior to the project.
